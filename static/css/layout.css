@@ -1,0 +1,121 @@
+/* CSS to control the appearance of the web interface */
+
+body {
+	background-color: rgb(7, 0, 121);
+	min-width: 1100px;
+}
+
+header {
+	background-color: rgb(230, 245, 255);
+	padding: 5px 5px 5px 5px;
+}
+
+#logo {
+    height: 150px;
+    width: 150px;
+	margin: 20px;
+    float: left;
+}
+
+#title {
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: left;
+	color: rgb(55, 249, 157);
+	margin-top: 39px;
+	margin-bottom: 5px;
+}
+#subtitle {
+	font-family: 'Comfortaa', cursive;
+	text-align: left;
+	text-decoration: overline underline;
+	color: rgb(0, 162, 232);
+	font-size: 15px;
+	margin-top: 5px;
+	margin-bottom: 64px;
+}
+
+#info {
+	font-family: 'Piedra', cursive;
+	font-style: italic;
+	font-size: 50px;
+	text-align: left;
+	color: cornflowerblue;
+	line-height: 40px;
+	float: right;
+	margin-right: 20px;
+}
+#name {
+	color: midnightblue;
+}
+#desg {
+	font-size: 25px;
+	line-height: 10px;
+}
+#inf {
+	vertical-align: middle;
+	font-weight: bold;
+	font-family: fantasy;
+}
+
+nav {
+	background-color: rgb(7, 0, 121);
+    height: 50px;
+	text-align: center;
+}
+
+a {
+	font-family: 'Piedra', cursive;
+	text-decoration: none;
+	color: lightblue;
+	cursor: pointer;
+}
+.link {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-size: 20px;
+	margin: 10px 40px 10px 40px;
+	width: 250px;
+	height: 40px;
+}
+
+.link:hover {
+	background-color: aliceblue;
+	border: 2px solid blue;
+}
+.link:hover a {
+	color: blue;
+	text-decoration: none;
+}
+
+hr {
+	border: none;
+	border-bottom: 3px dotted #659dbd;
+}
+
+#main {
+	background: linear-gradient(0deg, rgb(7, 0, 121) 0%, #e7f9fb 1%, #e7f9fb 99%, rgb(7, 0, 121) 100%);
+	font-family: 'Indie Flower', sans-serif;
+	color: #31708e;
+	font-size: 25px;
+	padding: 15px 35px 15px 35px;
+}
+
+#section2 {
+	font-family: 'Walter Turncoat', cursive;
+}
+
+.heading {
+	font-family: 'Permanent Marker', cursive;
+}
+
+footer {
+	background-color: rgb(7, 0, 121);
+	color: #c4dbf6;
+	font-family: 'Comfortaa', cursive;
+	font-size: 15px;
+	text-align: center;
+	padding: 1px 1px 1px 1px;
+}

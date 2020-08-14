@@ -1,0 +1,152 @@
+<!-- Web interface for DocBot -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<title>
+			DocBot
+		</title>
+		<!-- Links to all required CSS and JS files -->
+		<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/bootstrap.min.css')}}">
+		<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/font-awesome.min.css')}}">
+		<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/fonts.css')}}">
+		<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/layout.css')}}">
+		<link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename = 'css/chat.css')}}">
+		<script type = "text/javascript" src = "{{url_for('static', filename = 'js/jquery.min.js')}}"></script>
+		<script type = "text/javascript" src = "{{url_for('static', filename = 'js/chat.js')}}"></script>
+	</head>
+	<body>
+		<!-- Header block -->
+		<header>
+			<img id = "logo" src = "{{url_for('static', filename = 'images/logo.png')}}">
+			<div id = "info">
+				<br>
+				<span id = "name">
+					DocBot
+				</span>
+				<br>
+				<span id = "desg">
+					Digitally Trained Medical Consultant<br>
+					Reg. No -
+				</span>
+				<span id = "inf">
+					&infin;
+				</span>
+			</div>
+			<br>
+			<h2 id = "title">
+				DocBot's
+			</h2>
+			<p id = "subtitle">
+				--- Ever-available symptom matching service ---
+			</p>
+			<br>
+		</header>
+		<!-- Navigation bar -->
+		<nav>
+			<button class = "link">
+				<a href = "#chat">Chat</a>
+			</button>
+			<button class = "link">
+				<a href = "#desc">Description</a>
+			</button> 
+		</nav>
+		<div id = "main">
+			<br>
+			<!-- Chat section -->
+			<section id = "chat">
+				<div class = "container">
+					<div class = "msg-header">
+						<div class = "msg-header-img">
+							<img class = "user-logo" src = "{{url_for('static', filename = 'images/doc1.svg')}}">
+						</div>
+						<div class = "active">
+							<h4>DOCBOT</h4>
+							<!-- Display status using Jinja code -->
+							<h6 id = "status">{{ status }}</h6>
+						</div>
+					</div>
+					<div class = "chat-page">
+						<div class = "msg-inbox">
+							<div class = "chats">
+								<!-- Display each message appropriately using Jinja code -->
+								<div class = "msg-page" id = "add">
+									{% for msg in conv %}
+										{% if msg[0] == 0 %}
+										<div class = "received-chats">
+											<div class = "received-chats-img">
+												<img class = "user-logo" src = "{{url_for('static', filename = 'images/doc2.svg')}}">
+											</div>
+											<div class = "received-msg">
+												<div class = "received-msg-inbox">
+													<p>{{ msg[1] }}</p>
+													<span class = "time">{{ msg[2] }}</span>
+												</div>
+											</div>
+										</div>
+										{% else %}
+										<div class = "outgoing-chats">
+											<div class = "outgoing-chats-img">
+												<img class = "user-logo" src = "{{url_for('static', filename = 'images/user.svg')}}">
+											</div>
+											<div class = "outgoing-chats-msg">
+												<p>{{ msg[1] }}</p>
+												<span class = "time">{{ msg[2] }}</span>
+											</div>
+										</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+						<form method = "post" action = "{{ url_for('consult') }}">
+							<div class = "msg-bottom">
+								<div class = "input-group">
+									<input type = "text" name = "message" id = "message" class = "form-control" placeholder = "Type a message ..." autocomplete = "off">
+									<button id = "submit" class = "input-group-append">
+										<span class = "input-group-text"><i class = "fa fa-paper-plane"></i></span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<hr>
+			<br>
+			<!-- Description section -->
+			<section id = "desc">
+				<h2 align = "center" class = "heading">
+					<b><u>Description</u></b>
+				</h2>
+				<p>
+					The current situation has forced us all to tread unknown grounds, and has brought about a number of unwelcome changes in our lifestyle. And with them, have come a number of problems which have no simple and risk-free solution.<br>
+					Let me ask you, what would you do if you woke up tomorrow with a sore throat? What would you do if soon, your nose began leaking like a broken tap? What would you do if you suddenly woke up lying on the kitchen floor, after having collapsed due to high fever?
+				</p>
+				<p>
+					Due to the ongoing coronavirus pandemic, a good many clinics remain closed. As such, people all over are forced to visit hospitals in case of any ailments (or, simply bear the illness in silence). And to further intensify the problem, with the effect the current situation has had on our mental fortitude, even a passing cold is enough to make people nervous and fill them with an unnamed dread.<br>
+					But, to visit a hospital under such circumstances is nothing short of a big gamble. What if this visit exposed you to the virus? What if you had to undergo rigorous testing only to find out that you had simply caught the common flu?
+				</p>
+				<p>
+					This is where this symptom-matching service comes in. This application can be used to predict, to some extent, what disease you have contracted. Although this analysis is not set in stone, it can still provide some sort of reference on whether the problem can resolve itself or if you must consult a professional. DocBot hopes this service will help clear your confusion to some extent.
+				</p>
+				<p>
+					Thank you for visiting! Get well soon!
+				</p>
+			</section>
+		</div>
+		<!-- Footer block -->
+		<footer>
+			<br>
+			<h4>
+				Disclaimer!
+			</h4>
+			<p>
+				DocBot aims at assisting, not replacing professional health care. The final diagnosis is the full responsibility of the person using this service.<br>
+				DocBot and its team cannot be held accountable for harmful, truncated or erroneous use of information derived from its use.
+			</p>
+		</footer>
+	</body>
+</html>

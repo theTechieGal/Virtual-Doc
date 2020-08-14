@@ -1,0 +1,42 @@
+/* CSS to specify custom fonts */
+
+@font-face {
+	font-family: 'Comfortaa';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		 url('../fonts/Comfortaa/comfortaa-v28-latin-regular.woff2') format('woff2'),
+		 url('../fonts/Comfortaa/comfortaa-v28-latin-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Indie Flower';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Indie Flower'), local('IndieFlower'),
+		 url('../fonts/Indie Flower/indie-flower-v11-latin-regular.woff2') format('woff2'),
+		 url('../fonts/Indie Flower/indie-flower-v11-latin-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Permanent Marker';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'),
+		 url('../fonts/Permanent Marker/permanent-marker-v9-latin-regular.woff2') format('woff2'),
+		 url('../fonts/Permanent Marker/permanent-marker-v9-latin-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Piedra';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Piedra Regular'), local('Piedra-Regular'),
+		 url('../fonts/Piedra/piedra-v8-latin-regular.woff2') format('woff2'),
+		 url('../fonts/Piedra/piedra-v8-latin-regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Walter Turncoat';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Walter Turncoat Regular'), local('WalterTurncoat-Regular'),
+		 url('../fonts/Walter Turncoat/walter-turncoat-v10-latin-regular.woff2') format('woff2'),
+		 url('../fonts/Walter Turncoat/walter-turncoat-v10-latin-regular.woff') format('woff');
+}

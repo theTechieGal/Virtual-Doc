@@ -1,0 +1,189 @@
+/* CSS to control the appearance of the chat window */
+
+.fa {
+	font-family: 'FontAwesome' !important;
+}
+
+.container {
+	max-width: 100% !important;
+	margin: auto;
+	margin-top: 5px;
+	font-family: 'Indie Flower', cursive;
+	letter-spacing: 1px;
+}
+
+.user-logo {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+.msg-header {
+	border: none;
+	width: 100%;
+	height: 10%;
+	border-bottom: none;
+	display: inline-block;
+	background-color: rgb(0, 162, 232);
+}
+
+.msg-header-img {
+	border-radius: 50%;
+	width: 80px;
+	margin-left: 5px;
+	margin-top: 5px;
+	float: left;
+}
+
+.active {
+	font-family: 'Comfortaa', cursive;
+	width: 120px;
+	float: left;
+	margin-top: 15px;
+}
+
+.active h4 {
+	font-size: 40px;
+	margin-left: 20px;
+	color: white;
+}
+
+.active h6 {
+	font-size: 15px;
+	margin-left: 25px;
+	line-height: 10px;
+	color: white;
+}
+
+.chat-page {
+	padding: 0 0 50px 0;
+}
+
+.msg-inbox {
+	background-color: white;
+	border: 1px solid #a8d0e6;
+	overflow: hidden;
+	padding-bottom: 30px;
+}
+
+.chats {
+	padding: 30px 25px 0 25px;
+}
+
+.msg-page{
+	height: 600px;
+	overflow-y: auto;
+}
+
+.received-chats-img {
+	width: 50px;
+	float: left;
+}
+
+.received-msg {
+	display: inline-block;
+	padding: 0 0 0 10px;
+	vertical-align: top;
+	width: 92%;
+}
+
+.received-msg-inbox {
+	width: 55%;
+}
+
+.received-msg-inbox p {
+	background: aliceblue none repeat scroll 0 0;
+	border-radius: 10px;
+	color: midnightblue;
+	font-size: 25px;
+	margin: 0;
+	padding: 10px 10px 5px 12px;
+	width: 100%;
+}
+
+.time {
+	color: steelblue;
+	display: block;
+	font-size: 15px;
+	margin: 8px 0 0 5px;
+}
+
+.outgoing-chats {
+	overflow: hidden;
+	margin: 26px 20px;
+}
+
+.outgoing-chats-msg p {
+	background: midnightblue none repeat scroll 0 0;
+	border-radius: 10px;
+	color: aliceblue;
+	font-size: 25px;
+	margin: 0;
+	padding: 10px 10px 5px 12px;
+	width: 100%;
+}
+
+.outgoing-chats-msg {
+	float: right;
+	width: 50%;
+	padding: 0 10px 0 0;
+}
+
+.outgoing-chats-img {
+	width: 50px;
+	float: right;
+}
+
+.msg-bottom {
+	position: relative;
+	height: 80px;
+	background-color: transparent;
+	color: #3500d3;
+}
+
+.input-group {
+	float: left;
+	margin-top: 20px;
+	border-radius: 30px !important;
+	outline: none !important;
+	width: 100% !important;
+	background-color: white;
+}
+
+.form-control {
+	height: 60px;
+	border: none !important;
+	border-radius: 30px !important;
+	color: #3500d3;
+	font-size: 20px;
+}
+
+.input-group-text {
+	background: transparent !important;
+	border: none !important;
+}
+
+.input-group-append {
+	margin-left: 1px;
+	background-color: #192e5b;
+	border: none !important;
+	border-radius: 30px;
+	width: 60px;
+}
+
+.input-group .fa {
+	color: #f7f9fb;
+	float: right;
+	margin-left: -15%;
+	font-size: 22px;
+}
+
+.form-control::placeholder {
+	color: steelblue;
+}
+
+.form-control:focus {
+	border-color: none !important;
+	box-shadow: none !important;
+	font-weight: bold;
+	color: #3500d3;
+}
